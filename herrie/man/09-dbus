@@ -1,0 +1,16 @@
+.TP
+.BI "info.herrie.Herrie.seek " "seconds"
+Seek song relative to current position.
+.PP
+One can bind
+.B
+dbus-send
+commands to setup global hotkeys. Examples:
+.TP
+.B
+dbus-send --dest=info.herrie.Herrie /info/herrie/Herrie info.herrie.Herrie.pause
+Pause the current song.
+.TP
+.B
+dbus-send --dest=info.herrie.Herrie /info/herrie/Herrie info.herrie.Herrie.seek int32:-5
+Seek 5 seconds backward.

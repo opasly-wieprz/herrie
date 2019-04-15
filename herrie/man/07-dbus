@@ -1,0 +1,20 @@
+.SH DBUS INTEGRATION
+.B herrie
+can be controlled from other processes using DBus IPC.
+Currently only first instance of the application can receive messages.
+DBus methods must be invoked on path
+.I
+/info/herrie/Herrie
+using bus
+.I
+info.herrie.Herrie .
+Exposed methods:
+.TP
+.B info.herrie.Herrie.pause
+Pause/unpause playback.
+.TP
+.B info.herrie.Herrie.play
+Start playback.
+.TP
+.B info.herrie.Herrie.stop
+Stop the song.

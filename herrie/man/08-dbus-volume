@@ -1,0 +1,6 @@
+.TP
+.B info.herrie.Herrie.volumeDown
+Decrease the volume.
+.TP
+.B info.herrie.Herrie.volumeUp
+Increase the volume.

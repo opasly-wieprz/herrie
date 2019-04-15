@@ -175,6 +175,19 @@ dbus_server_volume_up(DBusServer *self, GError **error)
 	return (TRUE);
 }
 
+/**
+ * @brief DBus event to seek in the playback.
+ */
+static gboolean
+dbus_server_seek(DBusServer *self, gint32 len, GError **error)
+{
+	dbus_lock();
+	playq_cursong_seek((int) len, 1);
+	dbus_unlock();
+
+	return (TRUE);
+}
+
 #include <dbus_binding.h>
 
 /**

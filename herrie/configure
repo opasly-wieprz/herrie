@@ -110,7 +110,7 @@ CONFFILE=$CONFDIR/$APP_NAME.conf
 TRANSDIR=$PREFIX/share/locale
 [ "$CC" = "" ] && CC=cc
 [ "$INSTALL" = "" ] && INSTALL=install
-MANPARTS="00-man 02-man 04-man 06-man"
+MANPARTS="00-man 02-man 04-man 06-man 10-man"
 MANREGEX="-e 's|%%CONFFILE%%|$CONFFILE|'"
 
 # Command line options
@@ -224,6 +224,7 @@ then
 	CFLAGS="$CFLAGS -DBUILD_DBUS -I."
 	SRCS="$SRCS dbus"
 	DEPENDS_EXTRA_dbus="dbus_binding.h"
+	MANPARTS="$MANPARTS 07-dbus 09-dbus"
 fi
 # GST support
 if [ "$CFG_GST" != "" ]
@@ -369,6 +370,10 @@ if [ "$CFG_VOLUME" != "" ]
 then
 	CFLAGS="$CFLAGS -DBUILD_VOLUME"
 	MANPARTS="$MANPARTS 01-volume"
+	if [ "$CFG_DBUS" != "" ]
+	then
+		MANPARTS="$MANPARTS 08-dbus-volume"
+	fi
 fi
 
 echo "Configuration:"
