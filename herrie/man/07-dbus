@@ -10,6 +10,12 @@ using bus
 info.herrie.Herrie .
 Exposed methods:
 .TP
+.B info.herrie.Herrie.next
+Skip to the next track.
+.TP
+.B info.herrie.Herrie.prev
+Play previous track in the playlist (only XMMS mode).
+.TP
 .B info.herrie.Herrie.pause
 Pause/unpause playback.
 .TP

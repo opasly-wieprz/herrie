@@ -9,7 +9,7 @@ commands to setup global hotkeys. Examples:
 .TP
 .B
 dbus-send --dest=info.herrie.Herrie /info/herrie/Herrie info.herrie.Herrie.pause
-Pause the current song.
+Pause the song.
 .TP
 .B
 dbus-send --dest=info.herrie.Herrie /info/herrie/Herrie info.herrie.Herrie.seek int32:-5

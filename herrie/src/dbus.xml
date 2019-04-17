@@ -2,6 +2,7 @@
 <node name="/info/herrie/Herrie">
 	<interface name="info.herrie.Herrie">
 		<method name="next"/>
+		<method name="prev"/>
 		<method name="pause"/>
 		<method name="play"/>
 		<method name="stop"/>

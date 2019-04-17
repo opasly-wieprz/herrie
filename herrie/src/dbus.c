@@ -107,6 +107,19 @@ dbus_server_next(DBusServer *self, GError **error)
 }
 
 /**
+ * @brief DBus event to play previous track in the playlist.
+ */
+static gboolean
+dbus_server_prev(DBusServer *self, GError **error)
+{
+	dbus_lock();
+	playq_cursong_prev();
+	dbus_unlock();
+
+	return (TRUE);
+}
+
+/**
  * @brief DBus event to pause the current track.
  */
 static gboolean
